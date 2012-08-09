@@ -1,0 +1,1 @@
+var Config=function(){this.debug=!0};

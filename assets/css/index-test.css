@@ -1,0 +1,83 @@
+/* Browser shadow */
+
+#logo {
+	display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/* Background */
+.noise{
+   background-image: url("../../assets/img/bg.png");
+	background-repeat: repeat;
+}
+
+.gradient {
+   background-image: url("../../assets/img/gradient.png");
+   background-repeat: repeat-x;
+}
+
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.ui-state-hover {
+	background-color: #08c;
+	color: white;
+}
+
+.ui-widget-content {
+	background-color: white;
+	width: 40px;
+}
+
+#instruction h2 {
+	text-align: center;
+}
+
+#instruction {
+	/* grid pattern? */
+}
+
+.hero-unit {
+   padding: 20px 60px 60px;	
+}
+
+#debugConsole {
+	display: none;
+	position: fixed;
+	top: 70px;
+	right: 10px;
+}
+
+#iphoneDisplay {
+	display: block;
+}
+
+#iphoneFG {
+	position: absolute;
+	z-index: 3;
+}
+
+#floofCarousel
+{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+#iphoneBG {
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+}
+
+.mainDisplay {
+	position:relative;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chaplin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Development & Porfolio Website">
+    <meta name="author" content="Trent Ellingsen">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../assets/css/index-test.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+        
+	<script src="../assets/js/jquery-1.7.2.min.js"></script>
+	<script src="../assets/js/jquery-ui-1.8.22.custom.min.js"></script>
+	<script src="../data/config.js"></script>
+	
+	<script type="text/javascript">
+	   var config = new Config();
+	   
+	   $(function() {
+		   if (config.debug) {
+			   $('.carousel').carousel('pause');
+		   }
+	   });
+	
+		$(document).keydown(function(e) {
+			if (e.keyCode == 192) { 
+		      $('#debugConsole').toggle();
+		      $('#debugConsole input').focus();
+		   }
+		   if (e.keyCode == 13 && $('#debugConsole').is(":visible")) {
+			   execute($('#debugConsole input').val().replace('`', ''));
+		   }
+		});		
+		
+		$(function() {
+			   var debugShortcuts = [
+			         "$('.carousel').carousel('cycle');",
+			         "$('.carousel').carousel('pause');",
+			         "$('.carousel').carousel('next');",
+			         "$('.carousel').carousel('prev');",
+			         "$('#iphoneDisplay').draggable('enable');",
+			         "$('#iphoneDisplay').draggable('disable');"
+			      ];
+			   $( "#debugConsole input" ).autocomplete({
+				   source: debugShortcuts
+			   });
+		});
+		
+		function execute(val) {
+			$('body').append("<script type=\"text/javascript\">" + val + "<\/script>");
+		}		
+	</script>
+	
+  </head>
+
+  <body class="gradient">
+    <div id="debugConsole">
+      Debug: <input id="debug"/>
+    </div>
+    
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Trent Ellingsen</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+	      <div id="iphoneDisplay" class="span3 mainDisplay">
+		      <img id="iphoneFG" src="../assets/img/iphone_300w.png"/>
+		      <img src="../assets/img/iphone_300w.png"/>
+		      
+		      <div id="floofCarousel" class="carousel slide">
+		         <!--  Carousel items -->
+		         <div class="carousel-inner">
+		            <div class="active item"><img src="../assets/img/photo 1.png"/></div>
+		            <div class="item"><img src="../assets/img/photo 2.png"/></div>
+		            <div class="item"><img src="../assets/img/photo 3.png"/></div>
+		         </div>
+		      </div>
+		      <img id="iphoneBG" src="../assets/img/iphone_bg.png"/>
+	      </div>
+	      <div class="span7 hero-unit">
+	      <img id="logo" src="../assets/img/logo.png">
+	         <div>
+	           <br/>
+	            <p>Inspired by Japanese style photo booths, this app has lots of fun themese 
+	            to choose from, as well as many fun floofies (stamps) to put on your photos!
+	            <span class="label label-info">Available September 2012</span>
+	         </div>
+	         <br/>
+	         <a class="btn btn-large btn-info">Get Notified on Updates</a>
+	      </div>
+      </div>
+     </div> <!-- /container -->
+     <div id="instruction" class="container">
+      <div class="row">
+         <div class="span4">
+            <h2>Pick a Theme</h2>
+            <img src="../assets/img/themes.png" />
+         </div>
+         <div class="span4">
+            <h2>Take a Photo</h2>
+            <img src="../assets/img/icon.png" />
+         </div>
+         <div class="span4">
+            <h2>Add some Floofies!</h2>
+            <img src="../assets/img/stamps.png" />
+         </div>
+      </div>
+    </div> <!-- /container -->
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/index-test.js"></script>
+	  
+  </body>
+</html>
