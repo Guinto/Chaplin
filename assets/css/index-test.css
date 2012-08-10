@@ -1,7 +1,18 @@
 #logo {
+	padding: 0 40px;
+}
+
+#logo img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#devLogo {
+}
+
+#about {
+	padding: 0 10px;
 }
 
 /* Background */
@@ -31,13 +42,14 @@
 	width: 40px;
 }
 
-#instruction h2 {
+#instructions h2 {
+	margin-top: 20px; 
 	text-align: center;
 }
 
 #grid {
 	padding: 30px 0;
-	margin:  60px 0 20px 0;
+	margin:  0 0 20px 0;
 	background-color: #eaeaea;
 	background-size: 20px 20px;
 	background-image: -webkit-repeating-linear-gradient(45deg, rgba(220, 220, 220, .5),
@@ -59,7 +71,7 @@
 }
 
 .hero-unit {
-	padding: 20px 60px 60px;
+	padding: 10px 0;
 }
 
 #debugConsole {
@@ -99,10 +111,10 @@
 }
 
 .rotate{
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
-    transition-duration: 0.8s;
+    -webkit-transition-duration: 1.0s;
+    -moz-transition-duration: 1.0s;
+    -o-transition-duration: 1.0s;
+    transition-duration: 1.0s;
      
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;

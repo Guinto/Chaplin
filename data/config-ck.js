@@ -1,1 +1,1 @@
-var Config=function(){this.debug=!0};
+var Config=function(){this.debug=!1};

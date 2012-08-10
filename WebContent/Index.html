@@ -65,7 +65,8 @@
 
 	function execute(val) {
 		$('body').append(
-				"<script type=\"text/javascript\">" + val + "<\/script>")
+				"<script type=\"text/javascript\">" + val
+						+ "<\/script>")
 	}
 </script>
 
@@ -79,16 +80,12 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-				<a class="btn btn-navbar" data-toggle="collapse"
-					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span>
-				</a> <a class="brand" href="#">Trent Ellingsen</a>
-				<div class="nav-collapse">
-					<ul class="nav">
-						<li class="active"><a href="#">Home</a></li>
-					</ul>
-				</div>
+			   <div>
+				<a class="brand" href="http://trentedesign.com">
+				  <img id="devLogo" src="../assets/img/Logo White.png" />
+				</a>
 				<!--/.nav-collapse -->
+				</div>
 			</div>
 		</div>
 	</div>
@@ -106,7 +103,7 @@
 							<img src="../assets/img/photo 1.png" />
 						</div>
 						<div class="item">
-							<img src="../assets/img/photo 2.png" /> 
+							<img src="../assets/img/photo 2.png" />
 						</div>
 						<div class="item">
 							<img src="../assets/img/photo 3.png" />
@@ -115,37 +112,39 @@
 				</div>
 				<img id="iphoneBG" src="../assets/img/iphone_bg.png" />
 			</div>
-			<div class="span7 hero-unit">
-				<img id="logo" src="../assets/img/logo.png">
-				<div>
-					<br />
-					<p>
-						Inspired by Japanese style photo booths, this app has lots of fun
-						themese to choose from, as well as many fun floofies (stamps) to
-						put on your photos! <span class="label label-info">Available
-							September 2012</span>
+			<div class="span9">
+				<div class="hero-unit">
+				   <div class="row">
+				     <div id="logo"class="span8">
+					    <img src="../assets/img/logo.png">
+					</div>
+					</div>
+					<div id="instructions" class="row">
+						<div class="span3">
+							<h2>Pick a Theme</h2>
+							<img class="rotate" src="../assets/img/themes.png" />
+						</div>
+						<div class="span3">
+							<h2>Take a Photo</h2>
+							<img class="rotate" src="../assets/img/icon.png" />
+						</div>
+						<div class="span3">
+							<h2>Add Floofies!</h2>
+							<img class="rotate" src="../assets/img/stamps.png" />
+						</div>
+					</div>
 				</div>
-				<br /> <a class="btn btn-large btn-info">Get Notified on Updates</a>
 			</div>
 		</div>
 	</div>
 	<!-- /container -->
 	<div id="grid" class="shadow">
-		<div id="instruction" class="container">
-			<div class="row">
-				<div class="span4">
-					<h2>Pick a Theme</h2>
-					<img class="rotate" src="../assets/img/themes.png" />
-				</div>
-				<div class="span4">
-					<h2>Take a Photo</h2>
-					<img class="rotate" src="../assets/img/icon.png" />
-				</div>
-				<div class="span4">
-					<h2>Add some Floofies!</h2>
-					<img class="rotate"src="../assets/img/stamps.png" />
-				</div>
-			</div>
+		<div id="about" class="container">
+			<p>
+				Inspired by Japanese style photo booths, this app has lots of fun
+				themese to choose from, as well as many fun floofies (stamps) to
+				put on your photos! 
+			<span class="label label-info">Available September 2012</span>
 		</div>
 		<!-- /container -->
 	</div>
