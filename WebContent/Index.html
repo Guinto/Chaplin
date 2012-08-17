@@ -28,6 +28,9 @@
 <link rel="apple-touch-icon-precomposed"
 	href="../assets/ico/apple-touch-icon-57-precomposed.png">
 
+<link href='http://fonts.googleapis.com/css?family=Lobster'
+	rel='stylesheet' type='text/css'>
+
 <script src="../assets/js/jquery-1.7.2.min.js"></script>
 <script src="../assets/js/jquery-ui-1.8.22.custom.min.js"></script>
 <script src="../data/config.js"></script>
@@ -39,6 +42,18 @@
 		if (config.debug) {
 			$('.carousel').carousel('pause');
 		}
+
+		$('#theme').on('click', function() {
+			$("html, body").animate({ scrollTop: $('#pickATheme').offset().top }, 1000);
+		});
+		$('#photo').on('click', function() {
+			$("html, body").animate({ scrollTop: $('#takeAPhoto').offset().top }, 1000);
+		});
+		$('#floofies').on('click', function() {
+			$("html, body").animate({ scrollTop: $('#addFloofies').offset().top }, 1000);
+		});
+
+		setupDebugAutocomplete();
 	});
 
 	$(document).keydown(function(e) {
@@ -50,104 +65,142 @@
 			execute($('#debugConsole input').val().replace('`', ''));
 		}
 	});
-
-	$(function() {
-		var debugShortcuts = [ "$('.carousel').carousel('cycle');",
-				"$('.carousel').carousel('pause');",
-				"$('.carousel').carousel('next');",
-				"$('.carousel').carousel('prev');",
-				"$('#iphoneDisplay').draggable('enable');",
-				"$('#iphoneDisplay').draggable('disable');" ];
-		$("#debugConsole input").autocomplete({
-			source : debugShortcuts
-		});
-	});
-
-	function execute(val) {
-		$('body').append(
-				"<script type=\"text/javascript\">" + val
-						+ "<\/script>")
-	}
 </script>
 
 </head>
 
-<body class="noise"> 
+<body>
 	<div id="upper">
-	<div id="debugConsole">
-		Debug: <input id="debug" />
-	</div>
+		<div id="debugConsole">
+			Debug: <input id="debug" />
+		</div>
 
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container-fluid">
-				<div>
-					<a class="brand" href="http://trentedesign.com"> <img
-						id="devLogo" src="../assets/img/Logo White.png" />
-					</a>
-					<!--/.nav-collapse -->
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<div>
+						<a class="brand" href="http://trentedesign.com"> <img
+							id="devLogo" src="../assets/img/Logo White.png" />
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="container">
-		<div id="logo" class="page-header">
+		<div id="logo" class="container">
 			<img src="../assets/img/logo.png">
+			<h6>Friends + Themes + Floofies = the most fun you will ever
+				have taking photos</h6>
 		</div>
-		<div class="row">
-			<div id="iphoneDisplay" class="span3 mainDisplay">
-				<img id="iphoneFG" src="../assets/img/iphone_300w.png" /> <img
-					src="../assets/img/iphone_300w.png" />
 
-				<div id="floofCarousel" class="carousel slide">
-					<!--  Carousel items -->
-					<div class="carousel-inner">
-						<div class="active item">
-							<img src="../assets/img/photo 1.png" />
+
+
+		<div id="banner" class="innerShadow">
+			<div class="container">
+				<div class="row">
+
+					<div id="iphoneDisplay" class="offset2 span3">
+						<img id="iphoneFG" src="../assets/img/iphone_300w.png" /> <img
+							src="../assets/img/iphone_300w.png" />
+
+						<div id="floofCarousel" class="carousel slide">
+							<!--  Carousel items -->
+							<div class="carousel-inner">
+								<img class="active item" src="../assets/img/photo 1.png" /> <img
+									class="item" src="../assets/img/photo 2.png" /> <img
+									class="item" src="../assets/img/photo 3.png" />
+							</div>
 						</div>
-						<div class="item">
-							<img src="../assets/img/photo 2.png" />
-						</div>
-						<div class="item">
-							<img src="../assets/img/photo 3.png" />
+						<img id="iphoneBG" src="../assets/img/iphone_bg.png" />
+					</div>
+					<div class="span5">
+						<div id="instructions">
+							<div id="theme" class="row">
+								<img class="span2 rotate" src="../assets/img/themes.png" />
+								<h2>Pick a Theme</h2>
+								<p class="span3">Choose from a selection of fun themes
+									including super hero costumes, famous places, and random
+									objects.</p>
+							</div>
+							<div id="photo" class="row">
+								<img class="span2 rotate" src="../assets/img/icon.png" />
+								<h2>Take a Photo</h2>
+								<p class="span3">You get a 3 second count down timer to pick
+									a fun pose so think quick!</p>
+							</div>
+							<div id="floofies" class="row">
+								<img class="span2 rotate" src="../assets/img/stamps.png" />
+								<h2>Add Floofies!</h2>
+								<p class="span3">Floofies are fun stamps that you can add to
+									photos which include mustaches, stars, food, and many other fun
+									items.</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<img id="iphoneBG" src="../assets/img/iphone_bg.png" />
 			</div>
-			<div class="span9">
-				<div class="hero-unit">
-					<div id="instructions" class="row">
-						<div class="span3">
-							<h2>Pick a Theme</h2>
-							<img class="rotate" src="../assets/img/themes.png" />
-						</div>
-						<div class="span3">
-							<h2>Take a Photo</h2>
-							<img class="rotate" src="../assets/img/icon.png" />
-						</div>
-						<div class="span3">
-							<h2>Add Floofies!</h2>
-							<img class="rotate" src="../assets/img/stamps.png" />
-						</div>
-					</div>
-					<hr />
-					<div id="about">
-						<p>
-							Inspired by Japanese style photo booths, Photo Floof has lots of fun
-							themes to choose from and take poses with.  After you've taken the photo there are
-							many fun floofies (stamps) to 
-						<span class="label label-info">Available September 2012</span>
+		</div>
+		<div id="about">
+			<div class="container">
+				<div class="row">
+					<div class="offset2 span8">
+					<h1 class="page-header">What is Photo Floof?</h1>
+					<p>
+						Inspired by Japanese style photo booths, Photo Floof has lots of
+						fun themes to choose from and take poses with. After you've taken
+						the photo there are many fun floofies (stamps) to <span
+							class="label label-info">Available September 2012</span>
+					</p>
 					</div>
 				</div>
-				<div id="heroShadow">
-					<img src="../assets/img/shadow.png"/>
+			</div>
+		</div>
+		<div id="pickATheme">
+			<div class="container">
+				<div class="row">
+					<div class="well offset2 span8">
+					<h1 class="page-header">Pick a Theme</h1>
+					<p>
+						Choose from a selection of fun themes
+									including super hero costumes, famous places, and random
+									objects. 
+					</p>
+					<img src="../assets/img/photo 2.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="takeAPhoto">
+			<div class="container">
+				<div class="row">
+					<div class="well offset2 span8">
+					<h1 class="page-header">Take a Photo</h1>
+					<p>
+						You get a 3 second count down timer to pick
+									a fun pose so think quick!
+					</p>
+					<img src="../assets/img/icon.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="addFloofies">
+			<div class="container">
+				<div class="row">
+					<div class="well offset2 span8">
+					<h1 class="page-header">Add Floofies!</h1>
+					<p>
+						Floofies are fun stamps that you can add to
+									photos which include mustaches, stars, food, and many other fun
+									items.
+					</p>
+					<img src="../assets/img/photo 3.png" />
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	</div>
+
 	<!--<div id="footer" class="innerShadow">
 		<div>&nbsp;</div>	
 	</div>-->
