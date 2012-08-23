@@ -70,9 +70,10 @@ h1 {
 	color: #E7E7E7;
 }
 
-#instructions div{
-       cursor: pointer;
+#instructions div {
+	cursor: pointer;
 }
+
 .innerShadow {
 	-webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
 	-moz-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
@@ -169,4 +170,13 @@ h1 {
 	-webkit-transform: rotate(360deg);
 	-moz-transform: rotate(360deg);
 	-o-transform: rotate(360deg);
+}
+
+/* Dimensions set via css in MovingBoxes version 2.2.2+ https://github.com/CSS-Tricks/MovingBoxes*/
+#slider {
+	width: 500px;
+}
+
+#slider li {
+	width: 250px;
 }

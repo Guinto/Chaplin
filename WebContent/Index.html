@@ -12,6 +12,13 @@
 <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 <link href="../assets/css/index-test.css" rel="stylesheet">
 
+
+<!-- Required CSS -->
+<link href="../assets/css/movingboxes.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="../assets/css/movingboxes-ie.css" rel="stylesheet" media="screen" />
+	<![endif]-->
+
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,6 +40,7 @@
 
 <script src="../assets/js/jquery-1.7.2.min.js"></script>
 <script src="../assets/js/jquery-ui-1.8.22.custom.min.js"></script>
+<script src="../assets/js/jquery.movingboxes.js"></script>
 <script src="../data/config.js"></script>
 
 <script type="text/javascript">
@@ -44,16 +52,23 @@
 		}
 
 		$('#theme').on('click', function() {
-			$("html, body").animate({ scrollTop: $('#pickATheme').offset().top }, 1000);
+			$("html, body").animate({
+				scrollTop : $('#pickATheme').offset().top
+			}, 1000);
 		});
 		$('#photo').on('click', function() {
-			$("html, body").animate({ scrollTop: $('#takeAPhoto').offset().top }, 1000);
+			$("html, body").animate({
+				scrollTop : $('#takeAPhoto').offset().top
+			}, 1000);
 		});
 		$('#floofies').on('click', function() {
-			$("html, body").animate({ scrollTop: $('#addFloofies').offset().top }, 1000);
+			$("html, body").animate({
+				scrollTop : $('#addFloofies').offset().top
+			}, 1000);
 		});
 
 		setupDebugAutocomplete();
+		movingBoxes();
 	});
 
 	$(document).keydown(function(e) {
@@ -144,13 +159,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="offset2 span8">
-					<h1 class="page-header">What is Photo Floof?</h1>
-					<p>
-						Inspired by Japanese style photo booths, Photo Floof has lots of
-						fun themes to choose from and take poses with. After you've taken
-						the photo there are many fun floofies (stamps) to <span
-							class="label label-info">Available September 2012</span>
-					</p>
+						<h1 class="page-header">What is Photo Floof?</h1>
+						<p>
+							Inspired by Japanese style photo booths, Photo Floof has lots of
+							fun themes to choose from and take poses with. After you've taken
+							the photo there are many fun floofies (stamps) to <span
+								class="label label-info">Available September 2012</span>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -159,13 +174,38 @@
 			<div class="container">
 				<div class="row">
 					<div class="well offset2 span8">
-					<h1 class="page-header">Pick a Theme</h1>
-					<p>
-						Choose from a selection of fun themes
-									including super hero costumes, famous places, and random
-									objects. 
-					</p>
-					<img src="../assets/img/photo 2.png" />
+						<h1 class="page-header">Pick a Theme</h1>
+						<p>Choose from a selection of fun themes including super hero
+							costumes, famous places, and random objects.</p>
+							
+						<!-- MovingBoxes Slider -->
+						<ul id="slider">
+
+							<li><img src="../assets/img/1.jpg" alt="picture">
+								<h2>News Heading</h2>
+								<p>
+									Add a short exerpt here... <a
+										href="http://flickr.com/photos/justbcuz/112479862/">more</a>
+								</p></li>
+
+							<li><img src="../assets/img/2.jpg" alt="picture">
+								<h2>News Heading</h2>
+								<p>
+									Add a short exerpt here... <a
+										href="http://flickr.com/photos/joshuacraig/2698975899/">more</a>
+									and a whole lot more text goes here, so we can see the height
+									adjust.
+								</p></li>
+
+							<li><img src="../assets/img/3.jpg" alt="picture">
+								<h2>News Heading</h2>
+								<p>
+									Add a short exerpt here... <a
+										href="http://flickr.com/photos/ruudvanleeuwen/468309897/">more</a>
+								</p></li>
+
+						</ul>
+						<!-- end Slider #1 -->
 					</div>
 				</div>
 			</div>
@@ -174,12 +214,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="well offset2 span8">
-					<h1 class="page-header">Take a Photo</h1>
-					<p>
-						You get a 3 second count down timer to pick
-									a fun pose so think quick!
-					</p>
-					<img src="../assets/img/icon.png" />
+						<h1 class="page-header">Take a Photo</h1>
+						<p>You get a 3 second count down timer to pick a fun pose so
+							think quick!</p>
+						<img src="../assets/img/icon.png" />
 					</div>
 				</div>
 			</div>
@@ -188,13 +226,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="well offset2 span8">
-					<h1 class="page-header">Add Floofies!</h1>
-					<p>
-						Floofies are fun stamps that you can add to
-									photos which include mustaches, stars, food, and many other fun
-									items.
-					</p>
-					<img src="../assets/img/photo 3.png" />
+						<h1 class="page-header">Add Floofies!</h1>
+						<p>Floofies are fun stamps that you can add to photos which
+							include mustaches, stars, food, and many other fun items.</p>
+						<img src="../assets/img/photo 3.png" />
 					</div>
 				</div>
 			</div>
