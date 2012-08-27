@@ -1,3 +1,3 @@
 var Config = function() {
-	this.debug = true;
+	this.debug = false;
 };

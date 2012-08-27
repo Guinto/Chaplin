@@ -15,6 +15,12 @@
 	font-size: 15px;
 }
 
+#takeAPhoto img {
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
 html,body,#upper {
 	height: 100%;
 }
@@ -25,7 +31,7 @@ body>#upper {
 }
 
 #about {
-	padding: 40px 20px;
+	padding: 30px 20px 0;
 }
 
 body {
@@ -33,7 +39,11 @@ body {
 }
 
 #banner {
-	background-color: #373F4A;
+	/*background-color: #8D698A;*/
+	background: #8D698A;
+	background: -webkit-linear-gradient(45deg, #8D698A, pink);
+	background: -moz-linear-gradient(45deg, #8D698A, pink);
+	background: -linear-gradient(45deg, #8D698A, pink);
 }
 
 .ui-state-hover {
@@ -86,24 +96,7 @@ h1 {
 	z-index: 10;
 	height: 3em;
 	margin-top: -3em;
-	background-color: #eaeaea;
-	background-size: 20px 20px;
-	background-image: -webkit-repeating-linear-gradient(45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
-		-webkit-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
-	background-image: -moz-repeating-linear-gradient(45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
-		-moz-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
-	background-image: -o-repeating-linear-gradient(45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
-		-o-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
-	background-image: repeating-linear-gradient(44deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
-		repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
+	background-color: #333;
 }
 
 #instructions {
@@ -170,6 +163,47 @@ h1 {
 	-webkit-transform: rotate(360deg);
 	-moz-transform: rotate(360deg);
 	-o-transform: rotate(360deg);
+}
+
+.grid {
+	background-size: 20px 20px;
+	background-image: -webkit-repeating-linear-gradient(45deg, rgba(220, 220, 220, .5),
+		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
+		-webkit-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
+		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
+	background-image: -moz-repeating-linear-gradient(45deg, rgba(220, 220, 220, .5),
+		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
+		-moz-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
+		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
+	background-image: -o-repeating-linear-gradient(45deg, rgba(220, 220, 220, .5),
+		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
+		-o-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
+		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
+	background-image: repeating-linear-gradient(44deg, rgba(220, 220, 220, .5),
+		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
+		repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
+		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
+}
+
+#addFloofies {
+	margin-bottom: 70px;
+}
+
+#dragFloofies {
+	width: 200px;
+}
+
+#dragFloofies img {
+	margin-left: 20px;
+}
+
+#dragFloofies span {
+	position: relative;
+	left: 2em;
+}
+
+#chosenTheme img {
+	display: none;
 }
 
 /* Dimensions set via css in MovingBoxes version 2.2.2+ https://github.com/CSS-Tricks/MovingBoxes*/

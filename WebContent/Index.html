@@ -51,23 +51,7 @@
 			$('.carousel').carousel('pause');
 		}
 
-		$('#theme').on('click', function() {
-			$("html, body").animate({
-				scrollTop : $('#pickATheme').offset().top
-			}, 1000);
-		});
-		$('#photo').on('click', function() {
-			$("html, body").animate({
-				scrollTop : $('#takeAPhoto').offset().top
-			}, 1000);
-		});
-		$('#floofies').on('click', function() {
-			$("html, body").animate({
-				scrollTop : $('#addFloofies').offset().top
-			}, 1000);
-		});
-
-		setupDebugAutocomplete();
+		setup();
 		movingBoxes();
 	});
 
@@ -141,7 +125,7 @@
 								<img class="span2 rotate" src="../assets/img/icon.png" />
 								<h2>Take a Photo</h2>
 								<p class="span3">You get a 3 second count down timer to pick
-									a fun pose so think quick!</p>
+									a fun pose. So think quick!</p>
 							</div>
 							<div id="floofies" class="row">
 								<img class="span2 rotate" src="../assets/img/stamps.png" />
@@ -158,7 +142,7 @@
 		<div id="about">
 			<div class="container">
 				<div class="row">
-					<div class="offset2 span8">
+					<div class="well offset2 span8">
 						<h1 class="page-header">What is Photo Floof?</h1>
 						<p>
 							Inspired by Japanese style photo booths, Photo Floof has lots of
@@ -180,30 +164,9 @@
 							
 						<!-- MovingBoxes Slider -->
 						<ul id="slider">
-
-							<li><img src="../assets/img/1.jpg" alt="picture">
-								<h2>News Heading</h2>
-								<p>
-									Add a short exerpt here... <a
-										href="http://flickr.com/photos/justbcuz/112479862/">more</a>
-								</p></li>
-
-							<li><img src="../assets/img/2.jpg" alt="picture">
-								<h2>News Heading</h2>
-								<p>
-									Add a short exerpt here... <a
-										href="http://flickr.com/photos/joshuacraig/2698975899/">more</a>
-									and a whole lot more text goes here, so we can see the height
-									adjust.
-								</p></li>
-
-							<li><img src="../assets/img/3.jpg" alt="picture">
-								<h2>News Heading</h2>
-								<p>
-									Add a short exerpt here... <a
-										href="http://flickr.com/photos/ruudvanleeuwen/468309897/">more</a>
-								</p></li>
-
+							<li><img src="../assets/img/4Foreground.png" alt="Theme Photo"></li>
+							<li><img src="../assets/img/8Foreground.png" alt="Theme Photo"></li>
+							<li><img src="../assets/img/2Foreground.png" alt="Theme Photo"></li>
 						</ul>
 						<!-- end Slider #1 -->
 					</div>
@@ -215,9 +178,9 @@
 				<div class="row">
 					<div class="well offset2 span8">
 						<h1 class="page-header">Take a Photo</h1>
-						<p>You get a 3 second count down timer to pick a fun pose so
+						<p>You get a 3 second count down timer to pick a fun pose. So
 							think quick!</p>
-						<img src="../assets/img/icon.png" />
+						<img src="../assets/img/icon no border.png" />
 					</div>
 				</div>
 			</div>
@@ -229,7 +192,27 @@
 						<h1 class="page-header">Add Floofies!</h1>
 						<p>Floofies are fun stamps that you can add to photos which
 							include mustaches, stars, food, and many other fun items.</p>
-						<img src="../assets/img/photo 3.png" />
+						<div class="row">
+							<div id="dragFloofies" class="well grid offset1 span3">
+								<span class="label label-info">drag these onto the photo</span>
+								<img class="span1" src="../assets/img/00bunnyEarStamp.png" />
+								<img class="span1" src="../assets/img/2Stamp.png" />
+								<img class="span1" src="../assets/img/3Stamp.png" />
+								<img class="span1" src="../assets/img/4Stamp.png" />
+								<img class="span1" src="../assets/img/6Stamp.png" />
+								<img class="span1" src="../assets/img/7Stamp.png" />
+								<img class="span1" src="../assets/img/8Stamp.png" />
+								<img class="span1" src="../assets/img/10Stamp.png" />
+								<img class="span1" src="../assets/img/11Stamp.png" />
+								<img class="span1" src="../assets/img/yellowStarStamp.png" />
+							</div>
+							<div id="chosenTheme" class="span3">
+								<button type="button" class="btn btn-primary">Pick A Theme First</button>
+								<img src="../assets/img/4ForegroundPhoto.jpg" />
+								<img src="../assets/img/8ForegroundPhoto.jpg" />
+								<img src="../assets/img/2ForegroundPhoto.jpg" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

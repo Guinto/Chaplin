@@ -6,6 +6,55 @@ function execute(val) {
 	$('body').append("<script type=\"text/javascript\">" + val + "<\/script>");
 }
 
+function setup() {
+	setupDragFloofies();
+	setupSelectionEvents();
+	setupClickEvents();
+	//setupDebugAutocomplete();
+}
+
+function setupDragFloofies() {
+	$('#dragFloofies img').draggable();
+}
+
+function setupSelectionEvents() {
+	$('#pickATheme img').on('click', function() {
+		var src = $(this).attr('src');
+		src = src.substring(0, src.length - 4);
+		
+		$("#addFloofies button").hide();
+		$("#chosenTheme img").hide();
+		$("#addFloofies img[src^='" + src + "']").show();
+	});
+}
+
+function setupClickEvents() {
+	$('#theme').on('click', function() {
+		$("html, body").animate({
+			scrollTop : $('#pickATheme').offset().top
+		}, 1000);
+	});
+	$('#photo').on('click', function() {
+		$("html, body").animate({
+			scrollTop : $('#takeAPhoto').offset().top
+		}, 1000);
+	});
+	$('#floofies').on('click', function() {
+		$("html, body").animate({
+			scrollTop : $('#addFloofies').offset().top
+		}, 1000);
+	});
+	$('#takeAPhoto img').on('click', function() {
+		$('body').fadeTo(0, 0);
+		$('body').fadeTo(1000, 1);
+	});
+	$('#addFloofies button').on('click', function() {
+		$("html, body").animate({
+			scrollTop : $('#pickATheme').offset().top
+		}, 1000);	
+	});
+}
+
 function setupDebugAutocomplete() {
 	var debugShortcuts = [ "$('.carousel').carousel('cycle');",
 			"$('.carousel').carousel('pause');",
