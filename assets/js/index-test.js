@@ -7,10 +7,15 @@ function execute(val) {
 }
 
 function setup() {
+	displayDefaultTheme();
 	setupDragFloofies();
 	setupSelectionEvents();
 	setupClickEvents();
-	//setupDebugAutocomplete();
+	// setupDebugAutocomplete();
+}
+
+function displayDefaultTheme() {
+	$("#chosenTheme img").first().show();
 }
 
 function setupDragFloofies() {
@@ -21,10 +26,11 @@ function setupSelectionEvents() {
 	$('#pickATheme img').on('click', function() {
 		var src = $(this).attr('src');
 		src = src.substring(0, src.length - 4);
-		
-		$("#addFloofies button").hide();
+
 		$("#chosenTheme img").hide();
 		$("#addFloofies img[src^='" + src + "']").show();
+		$("#addFloofies img").css("top", 0);
+		$("#addFloofies img").css("left", 0);
 	});
 }
 
@@ -45,14 +51,15 @@ function setupClickEvents() {
 		}, 1000);
 	});
 	$('#takeAPhoto img').on('click', function() {
+		var originalColor = $('body').css("background-color");
+		$('body').css("background-color", "white");
 		$('body').fadeTo(0, 0);
-		$('body').fadeTo(1000, 1);
+		$('body').animate({
+			backgroundColor : originalColor,
+			opacity: 1
+		}, 1000);
 	});
-	$('#addFloofies button').on('click', function() {
-		$("html, body").animate({
-			scrollTop : $('#pickATheme').offset().top
-		}, 1000);	
-	});
+	;
 }
 
 function setupDebugAutocomplete() {
@@ -69,13 +76,16 @@ function setupDebugAutocomplete() {
 
 function movingBoxes() {
 	$('#slider').movingBoxes({
-		/* width and panelWidth options deprecated, but still work to keep the plugin backwards compatible
-		width: 500,
-		panelWidth: 0.5,
-		*/
-		startPanel   : 1,      // start with this panel
-		wrap         : false,   // if true, the panel will "wrap" (it really rewinds/fast forwards) at the ends
-		buildNav     : true,   // if true, navigation links will be added
-		navFormatter : function(){ return "&#9679;"; } // function which returns the navigation text for each panel
+		/*
+		 * width and panelWidth options deprecated, but still work to keep the
+		 * plugin backwards compatible width: 500, panelWidth: 0.5,
+		 */
+		startPanel : 1, // start with this panel
+		wrap : false, // if true, the panel will "wrap" (it really
+						// rewinds/fast forwards) at the ends
+		buildNav : true, // if true, navigation links will be added
+		navFormatter : function() {
+			return "&#9679;";
+		} // function which returns the navigation text for each panel
 	});
 }

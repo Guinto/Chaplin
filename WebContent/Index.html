@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href='http://fonts.googleapis.com/css?family=Lobster'
+	rel='stylesheet' type='text/css'>
 <meta charset="utf-8">
 <title>Chaplin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Development & Porfolio Website">
 <meta name="author" content="Trent Ellingsen">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Le styles -->
 <link href="../assets/css/bootstrap.css" rel="stylesheet">
@@ -35,8 +38,6 @@
 <link rel="apple-touch-icon-precomposed"
 	href="../assets/ico/apple-touch-icon-57-precomposed.png">
 
-<link href='http://fonts.googleapis.com/css?family=Lobster'
-	rel='stylesheet' type='text/css'>
 
 <script src="../assets/js/jquery-1.7.2.min.js"></script>
 <script src="../assets/js/jquery-ui-1.8.22.custom.min.js"></script>
@@ -97,17 +98,15 @@
 		<div id="banner" class="innerShadow">
 			<div class="container">
 				<div class="row">
-
 					<div id="iphoneDisplay" class="offset2 span3">
-						<img id="iphoneFG" src="../assets/img/iphone_300w.png" /> <img
-							src="../assets/img/iphone_300w.png" />
+						<img id="iphoneFG" src="../assets/img/iphone_300w.png" /> 
+						<img src="../assets/img/iphone_300w.png" />
 
 						<div id="floofCarousel" class="carousel slide">
-							<!--  Carousel items -->
 							<div class="carousel-inner">
-								<img class="active item" src="../assets/img/photo 1.png" /> <img
-									class="item" src="../assets/img/photo 2.png" /> <img
-									class="item" src="../assets/img/photo 3.png" />
+								<img class="active item span3" src="../assets/img/photo 1.png" /> <img
+									class="item span3" src="../assets/img/photo 2.png" /> <img
+									class="item span3" src="../assets/img/photo 3.png" />
 							</div>
 						</div>
 						<img id="iphoneBG" src="../assets/img/iphone_bg.png" />
@@ -117,20 +116,20 @@
 							<div id="theme" class="row">
 								<img class="span2 rotate" src="../assets/img/themes.png" />
 								<h2>Pick a Theme</h2>
-								<p class="span3">Choose from a selection of fun themes
+								<p class="span3 hidden-tablet">Choose from a selection of fun themes
 									including super hero costumes, famous places, and random
 									objects.</p>
 							</div>
 							<div id="photo" class="row">
 								<img class="span2 rotate" src="../assets/img/icon.png" />
 								<h2>Take a Photo</h2>
-								<p class="span3">You get a 3 second count down timer to pick
+								<p class="span3 hidden-tablet">You get a 3 second count down timer to pick
 									a fun pose. So think quick!</p>
 							</div>
 							<div id="floofies" class="row">
 								<img class="span2 rotate" src="../assets/img/stamps.png" />
 								<h2>Add Floofies!</h2>
-								<p class="span3">Floofies are fun stamps that you can add to
+								<p class="span3 hidden-tablet">Floofies are fun stamps that you can add to
 									photos which include mustaches, stars, food, and many other fun
 									items.</p>
 							</div>
@@ -154,14 +153,15 @@
 				</div>
 			</div>
 		</div>
-		<div id="pickATheme">
+		<div id="pickATheme" class="hidden-phone">
 			<div class="container">
 				<div class="row">
 					<div class="well offset2 span8">
 						<h1 class="page-header">Pick a Theme</h1>
-						<p>Choose from a selection of fun themes including super hero
-							costumes, famous places, and random objects.</p>
-							
+						<p>In this demo chose between the different themes by clicking on them and you will be able to edit them below in the <em>Add Floofies</em> section.</p>
+						<div class="demoInstructions">
+							<span class="label">Click A Theme To Select It</span>
+						</div>
 						<!-- MovingBoxes Slider -->
 						<ul id="slider">
 							<li><img src="../assets/img/4Foreground.png" alt="Theme Photo"></li>
@@ -173,19 +173,22 @@
 				</div>
 			</div>
 		</div>
-		<div id="takeAPhoto">
+		<div id="takeAPhoto" class="hidden-phone">
 			<div class="container">
 				<div class="row">
 					<div class="well offset2 span8">
 						<h1 class="page-header">Take a Photo</h1>
 						<p>You get a 3 second count down timer to pick a fun pose. So
 							think quick!</p>
+						<div class="demoInstructions">
+							<span class="label">Click the icon!</span>
+						</div>
 						<img src="../assets/img/icon no border.png" />
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="addFloofies">
+		<div id="addFloofies" class="hidden-phone">
 			<div class="container">
 				<div class="row">
 					<div class="well offset2 span8">
@@ -194,7 +197,9 @@
 							include mustaches, stars, food, and many other fun items.</p>
 						<div class="row">
 							<div id="dragFloofies" class="well grid offset1 span3">
-								<span class="label label-info">drag these onto the photo</span>
+								<div class="demoInstructions">
+									<span class="label">drag these onto the photo</span>
+								</div>
 								<img class="span1" src="../assets/img/00bunnyEarStamp.png" />
 								<img class="span1" src="../assets/img/2Stamp.png" />
 								<img class="span1" src="../assets/img/3Stamp.png" />
@@ -207,7 +212,6 @@
 								<img class="span1" src="../assets/img/yellowStarStamp.png" />
 							</div>
 							<div id="chosenTheme" class="span3">
-								<button type="button" class="btn btn-primary">Pick A Theme First</button>
 								<img src="../assets/img/4ForegroundPhoto.jpg" />
 								<img src="../assets/img/8ForegroundPhoto.jpg" />
 								<img src="../assets/img/2ForegroundPhoto.jpg" />

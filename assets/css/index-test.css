@@ -39,7 +39,6 @@ body {
 }
 
 #banner {
-	/*background-color: #8D698A;*/
 	background: #8D698A;
 	background: -webkit-linear-gradient(45deg, #8D698A, pink);
 	background: -moz-linear-gradient(45deg, #8D698A, pink);
@@ -62,6 +61,11 @@ h1 {
 	margin: 20px 0;
 }
 
+h2 {
+	font-family: 'Lobster', cursive;
+	margin: 20px 0;
+}
+
 .page-header {
 	padding-bottom: 17px;
 	margin: 18px 0;
@@ -72,11 +76,13 @@ h1 {
 	font-family: 'Lobster', cursive;
 	color: #E7E7E7;
 	font-size: 38px;
-	margin-top: 40px;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 #instructions p {
-	margin: 3px 0;
+	margin: 3px 5px;
 	color: #E7E7E7;
 }
 
@@ -120,6 +126,10 @@ h1 {
 	display: block;
 }
 
+#floofCarousel img {
+	margin: 0;
+}
+
 #iphoneFG {
 	position: absolute;
 	z-index: 3;
@@ -142,9 +152,10 @@ h1 {
 }
 
 #instructions .row:hover {
-	-webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: inset 0 0 15px -2px rgba(0, 0, 0, 0.8);
 	-moz-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
-	-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
+	-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);;
 }
 
 .rotate {
@@ -185,6 +196,11 @@ h1 {
 		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
 }
 
+.demoInstructions {
+	text-align: center;
+	margin: 5px 0;
+}
+
 #addFloofies {
 	margin-bottom: 70px;
 }
@@ -197,9 +213,8 @@ h1 {
 	margin-left: 20px;
 }
 
-#dragFloofies span {
-	position: relative;
-	left: 2em;
+#pickATheme span {
+	text-align: center;
 }
 
 #chosenTheme img {
