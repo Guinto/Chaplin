@@ -100,9 +100,24 @@ h2 {
 	clear: both;
 	position: relative;
 	z-index: 10;
-	height: 3em;
 	margin-top: -3em;
 	background-color: #333;
+	color: #888;
+}
+
+#footer img {
+	display: inline-block;
+	float: left;
+	padding: 20px;
+}
+
+#footer p {
+	padding: 30px 0;
+	text-align: center;
+}
+
+#footer a:hover {
+	text-decoration: none;	
 }
 
 #instructions {
@@ -178,22 +193,22 @@ h2 {
 
 .grid {
 	background-size: 20px 20px;
-	background-image: -webkit-repeating-linear-gradient(45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
-		-webkit-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
-	background-image: -moz-repeating-linear-gradient(45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
-		-moz-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
-	background-image: -o-repeating-linear-gradient(45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
-		-o-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
-	background-image: repeating-linear-gradient(44deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px ),
-		repeating-linear-gradient(-45deg, rgba(220, 220, 220, .5),
-		rgba(220, 220, 220, .5) 1px, transparent 1px, transparent 15px );
+	background-image: -webkit-repeating-linear-gradient(45deg, rgba(220, 220, 220, .03),
+		rgba(220, 220, 220, .03) 1px, transparent 1px, transparent 15px ),
+		-webkit-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .03),
+		rgba(220, 220, 220, .03) 1px, transparent 1px, transparent 15px );
+	background-image: -moz-repeating-linear-gradient(45deg, rgba(220, 220, 220, .03),
+		rgba(220, 220, 220, .03) 1px, transparent 1px, transparent 15px ),
+		-moz-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .03),
+		rgba(220, 220, 220, .03) 1px, transparent 1px, transparent 15px );
+	background-image: -o-repeating-linear-gradient(45deg, rgba(220, 220, 220, .03),
+		rgba(220, 220, 220, .03) 1px, transparent 1px, transparent 15px ),
+		-o-repeating-linear-gradient(-45deg, rgba(220, 220, 220, .03),
+		rgba(220, 220, 220, .03) 1px, transparent 1px, transparent 15px );
+	background-image: repeating-linear-gradient(44deg, rgba(220, 220, 220, .03),
+		rgba(220, 220, 220, .03) 1px, transparent 1px, transparent 15px ),
+		repeating-linear-gradient(-45deg, rgba(220, 220, 220, .03),
+		rgba(220, 220, 220, .03) 1px, transparent 1px, transparent 15px );
 }
 
 .demoInstructions {
