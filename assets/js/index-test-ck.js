@@ -1,1 +1,0 @@
-$(".carousel").carousel({interval:4e3});
