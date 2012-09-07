@@ -57,25 +57,12 @@
 		movingBoxes();
 	});
 
-	$(document).keydown(function(e) {
-		if (e.keyCode == 192) {
-			$('#debugConsole').toggle();
-			$('#debugConsole input').focus();
-		}
-		if (e.keyCode == 13 && $('#debugConsole').is(":visible")) {
-			execute($('#debugConsole input').val().replace('`', ''));
-		}
-	});
 </script>
 
 </head>
 
 <body>
 	<div id="upper">
-		<div id="debugConsole">
-			Debug: <input id="debug" />
-		</div>
-
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container-fluid">
