@@ -7,7 +7,8 @@
 <meta charset="utf-8">
 <title>Photo Floof</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="This is an iPhone app based on asian style photo booths with themes and stamps!">
+<meta name="description"
+	content="This is an iPhone app based on asian style photo booths with themes and stamps!">
 <meta name="author" content="Trent Ellingsen">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -56,22 +57,24 @@
 		setup();
 		movingBoxes();
 	});
-
 </script>
 
 <!-- Google Analytics -->
 <script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push([ '_setAccount', 'UA-34664132-1' ]);
+	_gaq.push([ '_trackPageview' ]);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-34664132-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www')
+				+ '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
 </script>
 </head>
 
@@ -81,7 +84,9 @@
 			<div class="navbar-inner">
 				<div class="container-fluid">
 					<div>
-						<img class="brand" id="devLogo" src="assets/img/Developed By Trent Logo.png" alt="developed by trent"/>
+						<img class="brand" id="devLogo"
+							src="assets/img/Developed By Trent Logo.png"
+							alt="developed by trent" />
 					</div>
 				</div>
 			</div>
@@ -91,6 +96,11 @@
 			<img src="assets/img/Photo Floof Logo.png" alt="Photo Floof Logo" />
 			<h6>Friends + Themes + Floofies = the most fun you will ever
 				have taking photos</h6>
+			<a
+				href="https://itunes.apple.com/us/app/photo-floof/id598177567?ls=1&mt=8">
+				<img id="download" src="assets/img/appStore.png"
+				alt="Download on the App Store" />
+			</a>
 		</div>
 
 
@@ -99,35 +109,45 @@
 			<div class="container">
 				<div class="row">
 					<div id="iphoneDisplay" class="offset2 span3">
-						<img id="iphoneFG" src="assets/img/iphone_300w.png" alt="Photo Floof iPhone Display FG" /> <img
-							src="assets/img/iphone_300w.png" alt="Photo Floof iPhone Display FG" />
+						<img id="iphoneFG" src="assets/img/iphone_300w.png"
+							alt="Photo Floof iPhone Display FG" /> <img
+							src="assets/img/iphone_300w.png"
+							alt="Photo Floof iPhone Display FG" />
 
 						<div id="floofCarousel" class="carousel slide">
 							<div class="carousel-inner">
-								<img class="active item span3" src="assets/img/Photo Floof Title Screen.png" alt="Photo Floof title screen" />
-								<img class="item span3" src="assets/img/Photo Floof Theme Selection.png" alt="Photo Floof theme selection"/> <img
-									class="item span3" src="assets/img/Photo Floof Stamp Example.png" alt="Photo Floof stamp example"/>
+								<img class="active item span3"
+									src="assets/img/Photo Floof Title Screen.png"
+									alt="Photo Floof title screen" /> <img class="item span3"
+									src="assets/img/Photo Floof Theme Selection.png"
+									alt="Photo Floof theme selection" /> <img class="item span3"
+									src="assets/img/Photo Floof Stamp Example.png"
+									alt="Photo Floof stamp example" />
 							</div>
 						</div>
-						<img id="iphoneBG" src="assets/img/iphone_bg.png" alt="Photo Floof iPhone Display BG"/>
+						<img id="iphoneBG" src="assets/img/iphone_bg.png"
+							alt="Photo Floof iPhone Display BG" />
 					</div>
 					<div class="span5">
 						<div id="instructions">
 							<div id="theme" class="row">
-								<img class="span2 rotate" src="assets/img/themes.png" alt="Pile of photo themes"/>
+								<img class="span2 rotate" src="assets/img/themes.png"
+									alt="Pile of photo themes" />
 								<h2>Pick a Theme</h2>
 								<p class="span3 hidden-tablet">Choose from a selection of
 									fun themes including super hero costumes, famous places, and
 									random objects.</p>
 							</div>
 							<div id="photo" class="row">
-								<img class="span2 rotate" src="assets/img/icon.png" alt="Photo Floof icon"/>
+								<img class="span2 rotate" src="assets/img/icon.png"
+									alt="Photo Floof icon" />
 								<h2>Take a Photo</h2>
 								<p class="span3 hidden-tablet">You get a 3 second count down
 									timer to pick a fun pose. So think quick!</p>
 							</div>
 							<div id="floofies" class="row">
-								<img class="span2 rotate" src="assets/img/stamps.png" alt="Pile of Floofies"/>
+								<img class="span2 rotate" src="assets/img/stamps.png"
+									alt="Pile of Floofies" />
 								<h2>Add Floofies!</h2>
 								<p class="span3 hidden-tablet">Floofies are fun stamps that
 									you can add to photos which include mustaches, stars, food, and
@@ -146,8 +166,9 @@
 						<p>
 							Inspired by Japanese style photo booths, Photo Floof has lots of
 							fun themes to choose from and take poses with. After you've taken
-							the photo there are many fun floofies (stamps) to <span
-								class="label label-info">Available September 2012</span>
+							the photo there are many fun floofies (stamps) to <a
+								href="https://itunes.apple.com/us/app/photo-floof/id598177567?ls=1&mt=8"><span
+								class="label label-info">Available Now!</span></a>
 						</p>
 					</div>
 				</div>
@@ -168,8 +189,10 @@
 						</div>
 						<!-- MovingBoxes Slider -->
 						<ul id="slider">
-							<li><img src="assets/img/Batman Theme.png" alt="Batman Theme"></li>
-							<li><img src="assets/img/Eiffel Tower Theme.png" alt="Eiffel Tower Theme"></li>
+							<li><img src="assets/img/Batman Theme.png"
+								alt="Batman Theme"></li>
+							<li><img src="assets/img/Eiffel Tower Theme.png"
+								alt="Eiffel Tower Theme"></li>
 							<li><img src="assets/img/Clown Theme.png" alt="Clown Theme"></li>
 						</ul>
 						<!-- end Slider #1 -->
@@ -187,7 +210,7 @@
 						<div class="demoInstructions">
 							<span class="label">Click the icon!</span>
 						</div>
-						<img src="assets/img/icon no border.png" alt="Photo Floof icon"/>
+						<img src="assets/img/icon no border.png" alt="Photo Floof icon" />
 					</div>
 				</div>
 			</div>
@@ -202,23 +225,34 @@
 						<div class="row">
 							<div id="dragFloofies" class="well grid offset1 span3">
 								<div class="demoInstructions">
-									<span class="hidden-tablet label">drag these onto the photo</span>
-									<span class="visible-tablet label">example floofies</span>
+									<span class="hidden-tablet label">drag these onto the
+										photo</span> <span class="visible-tablet label">example
+										floofies</span>
 								</div>
-								<img class="span1" src="assets/img/Bunny Ear Floofy Stamp.png" alt="Bunny Ear Stamp Floofy"/> <img
-									class="span1" src="assets/img/Yellow Star Floofy Stamp.png" alt="Yellow Star Stamp Floofy"/> <img
-									class="span1" src="assets/img/Blue Star Floofy Stamp.png" alt="Blue Star Stamp Floofy"/> <img
-									class="span1" src="assets/img/Heart Floofy Stamp.png" alt="Heart Stamp Floofy"/> <img
-									class="span1" src="assets/img/Tear Floofy Stamp.png" alt="Tear Stamp Floofy"/> <img
-									class="span1" src="assets/img/Mustache Floofy Stamp.png" alt="Mustache Stamp Floofy"/> <img
-									class="span1" src="assets/img/Another Mustache Floofy Stamp.png" alt="Another Mustache Stamp Floofy"/> <img
-									class="span1" src="assets/img/Burger Floofy Stamp.png" alt="Burger Stamp Floofy"/> <img
-									class="span1" src="assets/img/Soda Floofy Stamp.png" alt="Soda Stamp Floofy"/> <img
-									class="span1" src="assets/img/yellowStarStamp.png" alt="Yellow Star Stamp Floofy"/>
+								<img class="span1" src="assets/img/Bunny Ear Floofy Stamp.png"
+									alt="Bunny Ear Stamp Floofy" /> <img class="span1"
+									src="assets/img/Yellow Star Floofy Stamp.png"
+									alt="Yellow Star Stamp Floofy" /> <img class="span1"
+									src="assets/img/Blue Star Floofy Stamp.png"
+									alt="Blue Star Stamp Floofy" /> <img class="span1"
+									src="assets/img/Heart Floofy Stamp.png"
+									alt="Heart Stamp Floofy" /> <img class="span1"
+									src="assets/img/Tear Floofy Stamp.png" alt="Tear Stamp Floofy" />
+								<img class="span1" src="assets/img/Mustache Floofy Stamp.png"
+									alt="Mustache Stamp Floofy" /> <img class="span1"
+									src="assets/img/Another Mustache Floofy Stamp.png"
+									alt="Another Mustache Stamp Floofy" /> <img class="span1"
+									src="assets/img/Burger Floofy Stamp.png"
+									alt="Burger Stamp Floofy" /> <img class="span1"
+									src="assets/img/Soda Floofy Stamp.png" alt="Soda Stamp Floofy" />
+								<img class="span1" src="assets/img/yellowStarStamp.png"
+									alt="Yellow Star Stamp Floofy" />
 							</div>
 							<div id="chosenTheme" class="span3">
-								<img src="assets/img/Batman Theme Photo.jpg" alt="Batman Theme Photo" /> <img
-									src="assets/img/Eiffel Tower Theme Photo.jpg" alt="Eiffel Tower Theme Photo" /> <img
+								<img src="assets/img/Batman Theme Photo.jpg"
+									alt="Batman Theme Photo" /> <img
+									src="assets/img/Eiffel Tower Theme Photo.jpg"
+									alt="Eiffel Tower Theme Photo" /> <img
 									src="assets/img/Clown Theme Photo.jpg" alt="Clown Theme Photo" />
 							</div>
 						</div>
